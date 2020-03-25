@@ -16,26 +16,15 @@
 </div>
 <br/>
 <br/>
-<br/>
 <section id="LOGO" class="section">
     <br/>
-    <br/>
-  <img src="photos\\LOGO2.jpg" alt="LOGO" width="600" height="300" >
+  <img src="photos\\LOGO.jpg" alt="LOGO" width="500" height="100" >
 </section>
 
 <section id="about" class="section">
+    <br />
   <br/>
-  <br/>
-  <br/>
-  <br/>
-
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-  <br/>
-<h2>About me</h2>
+<h2>About EMINEM</h2>
 <br/>
 
 <font size="4.5">
@@ -60,50 +49,80 @@ These were followed by 2017's Revival and 2018's Kamikaze. the latter being the 
 
 <section id="photos" class="section">
 <br/>
+<h2>Photos</h2>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<h2>My photos</h2>
-<br/>
-<img src="photos\\childhood.jpg" alt="childhood" width="600" height="445">
-<img src="photos\\show.jpg" alt="show" width="600" height="445">
-<br/>
-<img src="photos\\profile.jpg" alt="profile" width="400" height="400">
-<img src="photos\\kamikaza.jpg" alt="kamikaza" width="400" height="400">
-<img src="photos\\tatos.jpg" alt="tatos" width="400" height="400">
-<br/>
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+            <img src="photos\\childhood.jpg" style="width:45%">
+        </div>
+        <div class="mySlides fade">
+            <img src="photos\\show.jpg" style="width:45%">
+        </div>
+        <div class="mySlides fade">
+            <img src="photos\\profile.jpg" style="width:45%">
+        </div>
+        <div class="mySlides fade">
+            <img src="photos\\kamikaza.jpg" style="width:45%">
+        </div>
+        <div class="mySlides fade">
+            <img src="photos\\tatos.jpg" style="width:45%">
+        </div>
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+  
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
 </section>
 
 <section id="playlist" class="section">
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 <h2>My playlist</h2>
-<br/>
-<br/>
 <br/>
 <br/>
 <br/>
@@ -114,16 +133,6 @@ These were followed by 2017's Revival and 2018's Kamikaze. the latter being the 
 </section>
 
 <section id="like" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 <br/>
 <br/>
 <br/>
@@ -151,10 +160,6 @@ These were followed by 2017's Revival and 2018's Kamikaze. the latter being the 
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
 <h2>Scan my code</h2>
 <br/>
 <br/>
@@ -166,16 +171,6 @@ These were followed by 2017's Revival and 2018's Kamikaze. the latter being the 
 </section>
 
 <section id="spa" class="section">
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 <br/>
 <br/>
 <h2>Ans</h2>
@@ -191,6 +186,7 @@ Also, in Web 1.0, Ofoto is an online digital photography website, on which user 
 It is the “readable” phrase of the World Wide Web with flat data.
 In Web 1.0, there is only limited interaction between sites and web users. 
 Web 1.0 is simply an information portal where users passively receive information without being given the opportunity to post reviews, comments, and feedback.
+Static pages. Content is served from the server’s file-system.
 
 <br/>
 <br/>
@@ -199,6 +195,9 @@ Web 2.0 refers to world wide website which highlight user-generated content,<br/
 usability and interoperability for end users.<br/>
 It is the “writable” phrase of the World Wide Web with interactive data. Unlike Web 1.0, Web 2.0 facilitates interaction between web users and sites, <br/>
 so it allows users to interact more freely with each other. Web 2.0 encourages participation, collaboration, and information sharing. <br/>
+A major difference is now Information flows between site owner and
+site users by means of evaluation & online commenting.
+As such, the end user is not only a user of the application but also a participant.
 Examples of Web 2.0 applications are Youtube, Wiki, Flickr, Facebook, and so on.<br/>
 
 <br/>
@@ -209,41 +208,30 @@ It is the “executable” phrase of Word Wide Web with dynamic applications, in
 Web 3.0 is a semantic web which refers to the future. In Web 3.0, computers can interpret information like humans and intelligently generate <br/>
 and distribute useful content tailored to the needs of users. One example of Web 3.0 is Tivo, a digital video recorder. Its recording program <br/>
 can search the web and read what it finds to you based on your preferences.
+A major difference is Semantic Web.<br />
+The succeeding evolution of the Web involves the Semantic Web.<br />
+The semantic web improves web technologies in demand to create, share and connect content through<br />
+    search and analysis based on the capability to comprehend the meaning of words, rather than on keywords or numbers.
 <br/>
 <br/>
 Examle: For the query: "Eminem" <br/>
 Web 1.0 will give a static results. <br/>
 Web 2.0 will give a interactive results such as Eminem's Facebook page. <br/>
-Web 3.0 will give a dynamic results, for example the last information the user was looking for about the artist. <br/>
+Web 3.0 will give a dynamic results, <br />
+which based on the wisdom of the crowd, for example the last information the user was looking for about the artist. <br />
+I will get interactive pages that have a lot of posts with a query like mine -<br />
+those pages contain database based on more than trillion user posts with a query like mine or queries in the same topic.<br />
 </section>
 
 <section id="contact" class="section">
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
 <h2>Contact me</h2>
-<br/>
-<br/>
-
-
-<form action="meshumey@post.bgu.ac.il" method="post" enctype="text/plain">
+<form action="mailto:someone@example.com" method="post" enctype="text/plain">
 Name:<br>
-<input type="text" name="name"><br>
+<input type="text" name="name" placeholder="Your Name"><br>
 E-mail:<br>
-<input type="text" name="mail"><br>
+<input type="text" name="mail" placeholder="Email Address"><br>
 <label for="country">Country</label><br>
 <select id="country" name="country">
   <option value="australia">Israel</option>

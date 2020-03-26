@@ -234,19 +234,31 @@ E-mail:<br>
 <input type="text" name="mail" placeholder="Email Address"><br>
 <label for="country">Country</label><br>
 <select id="country" name="country">
-  <option value="australia">Israel</option>
+  <option value="israel">Israel</option>
   <option value="canada">Canada</option>
   <option value="Italy">Italy</option>
   <option value="spain">Spain</option>
   <option value="usa">USA</option>
   <option value="fsrance">France</option>
+  <option value="other">Other</option>
 </select>
+<br>
+<label for="emojis">Emojis</label><br>
+
+<input list="emojis" name= "emojis" >
+<datalist id= "emojis" width="10px">
+  <option value=&#128512>
+  <option value=&#128514>
+  <option value=&#128515>
+  <option value=&#128542>
+  <option value=&#128532>
+</datalist>
+
 <br>
 Comment:<br>
 <textarea id="subject" name="comment" placeholder="Write something.." style="height:200px"></textarea><br><br>
 
-
-<input type="submit" value="Send">
+<input type="submit" onclick="alert('sent!')" value="Send">
 <input type="reset" value="Reset">
 </form>
 
